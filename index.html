@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>恋愛未実装</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- タイトル画面 -->
+        <div id="title-screen" class="screen">
+            <img id="logo" src="assets/images/logo/logo.png" alt="恋愛未実装">
+            <button id="start-btn">ゲーム開始</button>
+        </div>
+
+        <!-- ゲーム画面 -->
+        <div id="game-screen" class="screen hidden">
+            <!-- 背景 -->
+            <div id="background" class="bg"></div>
+
+            <!-- キャラクター立ち絵 -->
+            <img id="character" src="" alt="キャラクター" class="character">
+
+            <!-- テキスト表示エリア -->
+            <div id="text-box">
+                <p id="character-name"></p>
+                <p id="dialogue"></p>
+            </div>
+
+            <!-- 選択肢ボタン -->
+            <div id="choices-container"></div>
+        </div>
+
+        <!-- ゲームオーバー画面 -->
+        <div id="gameover-screen" class="screen hidden">
+            <h1 id="gameover-message"></h1>
+            <button id="restart-btn">もう一度プレイ</button>
+        </div>
+    </div>
+
+    <script src="js/story.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
