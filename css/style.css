@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#game-container {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 9 / 16;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* タイトル画面 */
+#title-screen {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#logo {
+    max-width: 80%;
+    margin-bottom: 40px;
+}
+
+#start-btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#start-btn:active {
+    transform: scale(0.95);
+}
+
+/* ゲーム画面 */
+#game-screen {
+    background: #f0f0f0;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: 1;
+}
+
+#character {
+    position: absolute;
+    height: 70%;
+    bottom: 150px;
+    z-index: 2;
+    max-width: 60%;
+}
+
+#text-box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    z-index: 3;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#character-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#dialogue {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#choices-container {
+    position: absolute;
+    bottom: 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 4;
+}
+
+.choice-btn {
+    padding: 12px;
+    background: #4ecdc4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.choice-btn:active {
+    background: #2ba39d;
+}
+
+/* ゲームオーバー画面 */
+#gameover-screen {
+    background: #2c3e50;
+    color: white;
+}
+
+#gameover-message {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#restart-btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
